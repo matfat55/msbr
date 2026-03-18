@@ -1,4 +1,4 @@
-# MSBR (Stroke-Based Renderer)
+# MSBR (Ming's Stroke Based Renderer)
 
 MSBR turns a photo into a painting made of procedural brush strokes.
 
