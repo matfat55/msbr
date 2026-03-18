@@ -1,0 +1,18 @@
+[package]
+name = "msbr"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+image = { version = "0.24", default-features = false, features = ["png", "jpeg"] }
+tiny-skia = "0.11"
+clap = { version = "4", features = ["derive"] }
+rand = "0.8"
+minifb = { version = "0.27", default-features = false, features = ["x11"] }
+tempfile = "=3.3.0"
+rayon = "=1.7.0"
+rayon-core = "=1.11.0"
+png = "0.17"
+[profile.release]
+opt-level = 3
+lto = "thin"
