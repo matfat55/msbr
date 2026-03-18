@@ -28,20 +28,18 @@ cargo build --release
 
 ## Quick Start
 
-```bash
-./target/release/msbr --input images/photo.jpg
-```
+Download the latest release, and open a terminal with msbr.exe placed in that directory. 
 
 Output is written under `images/`:
 
-- `--output painting.png` -> `images/painting.png`
+- `-o painting.png` -> `images/painting.png`
 
 ## Common Commands
 
 Basic:
 
 ```bash
-./target/release/msbr --input images/photo.jpg --output painting.png
+./msbr.exe -i images/photo.jpg -output painting.png
 ```
 
 Headless
@@ -62,7 +60,7 @@ Timelapse frames:
   --frame-dir frames
 ```
 
-## CLI Options
+## Options
 
 | Flag | Default | Description |
 |---|---|---|
@@ -160,11 +158,11 @@ ffmpeg -framerate 30 \
 
 ```text
 src/
-  main.rs       # CLI + render orchestration
-  analysis.rs   # gradient, edges, complexity, importance, error map
-  stroke.rs     # stroke geometry + tiny-skia rendering
-  pipeline.rs   # generation, refinement, commit path
-  canvas.rs     # canvas state, preview buffer, PNG metadata export
+  main.rs       | CLI + render orchestration
+  analysis.rs   | gradient, edges, complexity, importance, error map
+  stroke.rs     | stroke geometry + tiny-skia rendering
+  pipeline.rs   | generation, refinement, commit path
+  canvas.rs     | canvas state, preview buffer, PNG metadata export
 ```
 
 ## Output Metadata
